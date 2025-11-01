@@ -1,16 +1,30 @@
-# Scenario 1: Data Lake & Data Catalog
+# Scenario 1: Data Lake & Data Catalog  
 
-## Overview
-This scenario involves building a data lake using Amazon S3, creating a data catalog with AWS Glue, and securing access using AWS Lake Formation.
+## Overview  
+This scenario demonstrates how to build a **secure and scalable data lake** on AWS using **Amazon S3**, **AWS Glue**, and **Amazon Athena**.  
+The objective was to centralize structured and unstructured datasets in a single storage layer, automate metadata discovery, and enable ad-hoc querying without provisioning servers.  
 
-## Steps
-1. **Set up the data lake** on Amazon S3 for raw and processed data layers.
-2. **Build a data catalog** using AWS Glue Data Catalog.
-3. **Transform data** using AWS Glue ETL jobs from CSV to Parquet.
-4. **Secure access** with AWS Lake Formation.
-5. **Query data** using Amazon Athena.
+## Objective  
+Design a cost-efficient architecture for storing, cataloging, and analyzing data, providing a foundation for downstream analytics and machine learning use cases.  
 
-## Deliverables
-- Architecture diagrams in the `architecture/` folder.
-- AWS Glue scripts and SQL queries in the `code/` folder.
-- Screenshots of the AWS console actions in the `screenshots/` folder.
+## Architecture  
+- **Amazon S3** stores raw and processed data in separate buckets for lifecycle management.  
+- **AWS Glue Crawler** automatically discovers data schemas and updates the **Glue Data Catalog**.  
+- **Amazon Athena** queries data directly from S3 using SQL syntax, with metadata sourced from the catalog.  
+- **AWS IAM** controls access to datasets and services.  
+- **Amazon CloudWatch** monitors crawler and query performance.  
+
+## Implementation Summary  
+1. Created S3 buckets for raw and processed data storage.  
+2. Configured Glue crawlers to detect schema and populate the catalog.  
+3. Validated the cataloged data through sample Athena queries.  
+4. Defined lifecycle policies for cost optimization and data governance.  
+5. Tested permissions using IAM roles to ensure secure access boundaries.  
+
+## Outcome  
+The final solution provided a unified view of data with minimal management overhead, enabling fast and secure SQL querying at scale.  
+
+## Key Learnings  
+- Gained practical understanding of data lake architecture and automation.  
+- Learned how to manage schema evolution in dynamic datasets.  
+- Practiced applying IAM policies to control fine-grained data access.  

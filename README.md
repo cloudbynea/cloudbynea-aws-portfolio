@@ -9,4 +9,8 @@ Each scenario includes a description, architecture diagrams, code samples, and s
 3. **RESTful API with Lambda & DynamoDB**: Creating a serverless REST API with authentication.
 4. **Containerized Microservices on ECS Fargate**: Deploying microservices with scalability and high availability.
 
-Feel free to adapt the structure and add your assets, screenshots, diagrams, and code according to your achievements.
+
+1. [Data Lake & Data Catalog](./Scenario1_DataLake_Ingestion/README.md)
+2. [Event-Driven ETL & Streaming Analytics](./Scenario2_EventDriven_ETL/README.md)
+3. [RESTful API with Lambda & DynamoDB](./Scenario3_REST_API/README.md)
+4. [Containerized Microservices on ECS Fargate](./Scenario4_Containerized_Microservices/README.md)
